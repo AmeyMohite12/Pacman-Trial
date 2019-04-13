@@ -85,7 +85,44 @@
 		[1,2,1,1,2,2,1,2,2,1,1,2,1], 
 		[1,2,2,2,2,2,1,2,2,2,2,2,1], 
 		[1,1,1,1,1,1,1,1,1,1,1,1,1]
-	]
+	];
+
+	function drawworld(){
+
+		for(let i = 0; i < map.length ;i = i+1){
+			//console.log(map[i]);
+			
+			for(let j = 0; j < map[i].length ; j = j+1){
+				//	console.log(map[i][j]);
+
+				if(map[i][j] == 1){
+					document.getElementById("world").innerHTML += "<div class = 'wall '></div>";
+
+				}
+
+				else if(map[i][j] == 2){
+					document.getElementById("world").innerHTML += "<div class = 'coin '></div>";
+
+				}	
+				else if(map[i][j] == 3){
+					document.getElementById("world").innerHTML += "<div class = 'ground '></div>";
+
+				}	
+				else if(map[i][j] == 5){
+					document.getElementById("world").innerHTML += "<div class = 'pacman '></div>";
+
+				}	
+
+
+
+			}
+
+			document.getElementById("world").innerHTML += "<br>"
+
+		}
+	}
+
+	drawworld();
 
 	
 
