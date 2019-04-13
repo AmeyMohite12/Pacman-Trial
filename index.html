@@ -8,7 +8,44 @@
 			outline: 1px dotted purple; 
 		}
 
+		.pacman {
+			width : 50px;
+			height: 50px;
+			background-image: url("pacman.png");
+			display: inline-block;
+
+		}
+
+		.wall{
+			width : 50px;
+			height: 50px;
+			background-image: url("wall.png");
+			display: inline-block;
+		}	
+
+		.coin{
+			width : 50px;
+			height: 50px;
+			background-image: url("coin.png");
+			display: inline-block;
+		}	
+
+		.ground {
+			width : 50px;
+			height: 50px;
+			background-image: url("bg.png");
+			display: inline-block;
+
+
+		}
+
+		div {
+			/* pulls everything closer */
+			margin : -2px;
+			vertical-align:  top;
+		}
 		
+
 	
 
 
@@ -18,12 +55,38 @@
 <body>
 	<!-- All of our HTML code goes here... -->
 	
+
+	<div id = "world">
+
+
+		<!-- <div class= "pacman"></div>
+		<div class = "wall"></div>
+		<div class = "coin" ></div>'
+		<div class = "ground" ></div>' -->
+
 	
+	</div>
 	<!-- End of HTML-->
 </body>
 <script>
 	// All of our JavaScript code goes here... 
 	
+	// 1 ->wall
+	// 2 ->ground
+	// 3 ->coin
+	// 5 ->pacman
+	var map = [ 
+		[1,1,1,1,1,1,1,1,1,1,1,1,1], 
+		[1,2,2,2,2,2,1,2,2,2,2,2,1], 
+		[1,2,1,1,1,2,1,2,1,1,1,2,1], 
+		[1,2,1,2,2,2,2,2,2,2,1,2,1], 
+		[1,2,2,2,1,1,5,1,1,2,2,2,1], 
+		[1,2,1,2,2,2,2,2,2,2,1,2,1], 
+		[1,2,1,1,2,2,1,2,2,1,1,2,1], 
+		[1,2,2,2,2,2,1,2,2,2,2,2,1], 
+		[1,1,1,1,1,1,1,1,1,1,1,1,1]
+	]
+
 	
 
 
